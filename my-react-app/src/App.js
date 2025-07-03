@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
 
-const API_URL = 'http://localhost:8000/api/';
+// Змінна середовища з адресою бекенду
+const API_URL = process.env.REACT_APP_BACKEND_URL + 'api/';
 
 function App() {
   const [bags, setBags] = useState([]);
